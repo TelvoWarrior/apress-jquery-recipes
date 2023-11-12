@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Context Menu on Right Click</title>
+    <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body oncontextmenu="return false">
+    <p class="info">Books are the world of information. As said the books are the best
+        friends. A wise man always has a library of several books</p>
+    <ul id="contextmenu">
+        <li><a href="https://github.com/TelvoWarrior?tab=repositories">Books</a>
+            <ul>
+                <li><a href="https://github.com/TelvoWarrior?tab=repositories" id="webd">Web Development</a></li>
+                <li><a href="https://github.com/TelvoWarrior?tab=repositories" id="pgmng">Programming</a></li>
+                <li><a href="https://github.com/TelvoWarrior?tab=repositories" id="datab">RDBMS</a></li>
+            </ul>
+        </li>
+    </ul>   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
