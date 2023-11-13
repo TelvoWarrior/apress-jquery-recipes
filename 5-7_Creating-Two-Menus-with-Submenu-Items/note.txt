@@ -1,0 +1,18 @@
+5-7 Creating Two Menus with Submenu Items
+
+Самый сложный пример на текущий момент
+
+В листинге, в стилях присутствуют записи вида
+    ul.dropdown li
+    ul.dropdown a:hover
+
+Т.е. избыточно указан элемент ul вначале
+В моем варианте, у меня вместо класса используется идентификатор и название отличается dropdown-menu
+В итоге, я удалил избыточное использование ul и мои селекторы выглядят следующим образом
+    #dropdown-menu li
+    #dropdown-menu a:hover
+
+То что у меня вызвало трудности:
+    position: absolute;
+    top:0;
+    position: relative;
