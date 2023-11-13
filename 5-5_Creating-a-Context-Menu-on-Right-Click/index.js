@@ -20,9 +20,7 @@ $(document).ready(function(){
     });
     
     //Данный код должен убирать контекстное меню при нажатии клавиши ESC, но этого не происходит
-    $("body").on("keypress",function(event){
-        if(event.key="Escape") {
-            $("#contextmenu").hide();
-        }
+    $("body").on("keydown",function(){
+        $("#contextmenu").hide();
     });
 });

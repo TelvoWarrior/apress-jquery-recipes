@@ -1,3 +1,24 @@
 Узнать про oncontextmenu="return false"
 
 Столкнулся с проблемой, заключащейся в том, что контекстное меню не убирается при нажатии ESC.
+
+Опытным путем удалось выяснить, что метод .on("keypress", function(){}) не работает в Chrome.
+Я попробовал использовать конструкцию .on("keydown",function(event){alert(`${event.key}`);})
+что бы выяснить работает эта конструкция или нет, выполнение программы попадает внутрь функции или
+оно застревает на ее объявлении. 
+С аргументом "keydown" программа выполнялась, а с "keypress" нет.
+
+Так же, в документации jQuery написано следующее:
+Note: as the keypress event isn't covered by any official specification, 
+the actual behavior encountered when using it may differ across browsers, browser versions, and platforms.
+
+Поэтому, я делаю вывод, что моей ошибки нет.
+В качестве решения, выбрал способ с использованием аргумента "keypress".
+В таком случае, при нажатии любой клавиши, контекстное меню будет исчезать.
+
+Вот что еще вычитал в документации:
+...keys such as Shift, Esc, and delete trigger keydown events but not keypress events...
+
+Т.е. клавиши Shift, Esc и delete тригерят keydown событие, но не срабатывают на keypress события.
+Я проверил с использованием другой клавиши. В качестве примера использовал "А".
+Метод с аргументом "keypress" сработал.
