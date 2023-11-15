@@ -17,7 +17,8 @@
 
 $(document).ready(function(){
     //Код ниже сворачивает меню, если убрать указатель мыши с области p.menus
-    $("p.menus").on("mouseout", function(){
+    //Заменил селектор на ul и метод на mouseleave
+    $("ul").on("mouseleave", function(){
         //Проверил не устарел ли метод .slideUp
         //Метод не устарел, у него много различных вариантов использования аргументов
         //Не нашел ни одного значения аргумента "slow"
@@ -26,6 +27,6 @@ $(document).ready(function(){
     $("p.menus").on("mouseover", function(){
         //.siblings("div.menu-items").slideUp("slow"); --- этот код отвечает за то, что бы когда мы
         //переводили курсор мыши на другое меню, предыдущее меню скрывалось
-        $(this).next("div.menu-items").slideDown(500).siblings("div.menu-items").slideUp("slow");
+        $(this).next("div.menu-items").slideDown(500).siblings("div.menu-items").slideUp("slow"); 
     });
 });
