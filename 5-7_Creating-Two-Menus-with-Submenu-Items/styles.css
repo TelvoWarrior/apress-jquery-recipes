@@ -82,6 +82,9 @@ ul {
     на предыдущий список
     width:100%;
     top:0; --- я не увидел разницы при наличии этого свойства или его отсутствия; нужно разбираться;
+                The top property is set to 0 to make the submenu items
+                at the same distance (from the top border of the browser) as the menu item whose
+                submenu items are being displayed
 */
 #dropdown-menu ul ul {
     left:100%;
