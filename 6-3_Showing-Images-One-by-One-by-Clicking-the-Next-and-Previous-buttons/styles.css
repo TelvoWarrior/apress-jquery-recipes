@@ -1,0 +1,38 @@
+
+ul img {
+    width: 1000px;
+    margin: 0;
+    
+}
+
+#image-slider {
+    width: 1000px;
+    height: 630px;
+    overflow: hidden;
+    margin: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px gray,-10px 10px 10px gray;
+    border-top: 1px solid gray;
+}
+
+#image-slider ul {
+    list-style: none;
+    width: 5000px;
+    margin: 0;
+    padding: 0;
+}
+
+#image-slider li {
+    width: 1000px;
+    float: left;
+}
+
+.left-arrow {
+    float: left;
+    width: 50px;
+}
+.right-arrow {
+    float: right;
+    width: 50px;
+}
