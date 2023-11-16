@@ -1,2 +1,3 @@
 6-2. Managing and Manipulating the jQuery Queue
 
+Понравился метод slideToggle.
